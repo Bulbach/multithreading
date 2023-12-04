@@ -10,10 +10,7 @@ public class Accumulator {
     @Setter
     @Getter
     private int value;
-    private final int expectedValue;
-
     public void add(int value) {
         this.value += value;
     }
-
 }

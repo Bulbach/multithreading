@@ -5,15 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a72efb8-ba6f-4c85-93bf-9c8529175a23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Accumulator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Request.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Server.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/model/Accumulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Accumulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/model/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Server.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1701627504661</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="feature/multithreading : first attempt (failed)">
+      <option name="closed" value="true" />
+      <created>1701685177433</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1701685177433</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feature/multithreading: second attempt (failed)">
+      <option name="closed" value="true" />
+      <created>1701690819010</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701690819010</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -150,7 +162,16 @@
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="master start commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="master start commit" />
+    <MESSAGE value="feature/multithreading : first attempt (failed)" />
+    <MESSAGE value="feature/multithreading: second attempt (failed)" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature/multithreading: second attempt (failed)" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="GradleRunConfiguration">
+        <watch expression="server.sharedResource" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
