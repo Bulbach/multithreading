@@ -12,22 +12,29 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
+import java.util.concurrent.ThreadLocalRandom;
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
 
 @RequiredArgsConstructor
-public class Server implements Callable<Void> {
+public class Server implements Runnable{
+    private final List<Integer> sharedResource;
+    private final Lock lock;
 
-    private final List<Request> requestList;
-    private final List<Integer> sharedResource = new CopyOnWriteArrayList<>();;
-    private final Accumulator accumulator;
-    private final Lock lock = new ReentrantLock();
+    public Server(List<Integer> sharedResource) {
+        this.sharedResource = sharedResource;
+        this.lock = new ReentrantLock();
+    }
 
-    public Integer processRequest(Request request) throws InterruptedException {
-        int value = request.getValue();
-        int delay = (int) (Math.random() * 901) + 100; // задержка от 100 до 1000 мс
-        Thread.sleep(delay);
+    public int processRequest(int value) {
+        int processingDelay = 100 + (int)(Math.random() * 901);  // случайная задержка от 100 до 1000 мс
+        try {
+            Thread.sleep(processingDelay);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
         lock.lock();
         try {
             sharedResource.add(value);
@@ -38,26 +45,7 @@ public class Server implements Callable<Void> {
     }
 
     @Override
-    public Void call() {
-        ExecutorService executor = Executors.newCachedThreadPool();
-        List<Future<Integer>> futures = new ArrayList<>();
+    public void run() {
 
-        for (Iterator<Request> iterator = requestList.iterator(); iterator.hasNext();) {
-            Request request = iterator.next();
-            Future<Integer> future = executor.submit(() -> processRequest(request));
-            futures.add(future);
-        }
-
-        for (Future<Integer> future : futures) {
-            try {
-                future.get(); // дожидаемся выполнения всех запросов
-            } catch (InterruptedException | ExecutionException e) {
-                e.printStackTrace();
-            }
-        }
-
-        executor.shutdown();
-        accumulator.setValue(sharedResource.stream().mapToInt(Integer::intValue).sum());
-        return null;
     }
 }
