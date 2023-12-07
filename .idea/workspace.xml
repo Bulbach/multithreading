@@ -5,19 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1a72efb8-ba6f-4c85-93bf-9c8529175a23" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Response.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/IntegrationTestClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestClientClass.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/TestServerClass.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/model/Accumulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Accumulator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/model/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/alex/model/Server.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/alex/model/Server.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_2023_11_36_[Changes]/shelved.patch" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_12_2023_11_36__Changes_.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +38,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="develop" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitToolBoxStore">
@@ -62,7 +56,7 @@
                 <list>
                   <RecentBranch>
                     <option name="branchName" value="feature/multithreading" />
-                    <option name="lastUsedInstant" value="1701627577" />
+                    <option name="lastUsedInstant" value="1701940113" />
                   </RecentBranch>
                   <RecentBranch>
                     <option name="branchName" value="develop" />
@@ -93,18 +87,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.multithreading [:Main.main()].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "feature/multithreading",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/ClevertecCourses/Concurrency/multithreading",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.multithreading [:Main.main()].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/multithreading&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ClevertecCourses/Concurrency/multithreading&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="by.alex.Main" />
@@ -217,11 +211,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
-        <item itemvalue="Gradle.TestClientClass" />
-        <item itemvalue="Gradle.IntegrationTestClass.testMultithreadedWorkWithClassClientAndServer" />
         <item itemvalue="Gradle.TestServerClass.testListValueAfterProcessingRequests" />
         <item itemvalue="Gradle.TestClientClass.testValueFromAccumulatorWithTestValueAfterProcessingRequests" />
+        <item itemvalue="Gradle.TestClientClass" />
+        <item itemvalue="Gradle.IntegrationTestClass.testMultithreadedWorkWithClassClientAndServer" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
