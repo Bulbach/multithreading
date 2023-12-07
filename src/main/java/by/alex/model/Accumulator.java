@@ -6,10 +6,12 @@ import lombok.Setter;
 
 
 @RequiredArgsConstructor
+@Setter
+@Getter
 public class Accumulator {
-    @Setter
-    @Getter
+
     private int value;
+
     public void add(int value) {
         this.value += value;
     }

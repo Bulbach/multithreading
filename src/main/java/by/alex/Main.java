@@ -2,11 +2,8 @@ package by.alex;
 
 import by.alex.model.Accumulator;
 import by.alex.model.Client;
-import by.alex.model.Request;
 import by.alex.model.Server;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -14,30 +11,26 @@ import java.util.concurrent.Future;
 
 public class Main {
     public static void main(String[] args) {
-        List<Integer> sharedResource = new ArrayList<>();
-        int n = 16; // пример: n = 10
-        for (int i = 1; i <= n; i++) {
-            sharedResource.add(i);
-        }
+        int originSizeList = 100;
 
         Accumulator accumulator = new Accumulator();
-        accumulator.setValue((1 + n) * (n / 2));
+        int expected = (1 + originSizeList) * (originSizeList / 2);
 
-        Server server = new Server(sharedResource,accumulator);
-        Client client = new Client(sharedResource, server,accumulator);
+        Server server = new Server();
+        Client client = new Client(server, accumulator, originSizeList);
 
         ExecutorService executor = Executors.newCachedThreadPool();
-        Future<Integer> serverFuture = executor.submit(server);
         Future<Integer> clientFuture = executor.submit(client);
-
+        System.out.println(server.getCommonList());
         try {
-            serverFuture.get();
             int result = clientFuture.get();
-            System.out.println("Integration test result: " + (result == accumulator.getValue()));
+            System.out.println("result: " + result);
+            System.out.println("Integration test result: " + (result == expected));
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         } finally {
             executor.shutdown();
         }
+        server.getCommonList().stream().sorted().forEach(System.out::println);
     }
 }
