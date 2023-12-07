@@ -1,36 +1,37 @@
-package by.alex;
-
 import by.alex.model.Accumulator;
 import by.alex.model.Client;
 import by.alex.model.Server;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
-public class Main {
-    public static void main(String[] args) {
+public class IntegrationTestClass {
+    @Test
+    public void testMultithreadedWorkWithClassClientAndServer() {
+        // When
         int originSizeList = 100;
-
         Accumulator accumulator = new Accumulator();
         int expected = (1 + originSizeList) * (originSizeList / 2);
-
         Server server = new Server();
         Client client = new Client(server, accumulator, originSizeList);
-
+        int actual = 0;
         ExecutorService executor = Executors.newCachedThreadPool();
         Future<Integer> clientFuture = executor.submit(client);
-        System.out.println(server.getCommonList());
+        // Given
         try {
-            int result = clientFuture.get();
-            System.out.println("result: " + result);
-            System.out.println("Integration test result: " + (result == expected));
+             actual = clientFuture.get();
+
         } catch (InterruptedException | ExecutionException e) {
             e.printStackTrace();
         } finally {
             executor.shutdown();
         }
-        server.getCommonList().stream().sorted().forEach(System.out::println);
+
+        // Then
+        Assertions.assertEquals(expected,actual);
     }
 }
